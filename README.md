@@ -30,18 +30,6 @@ This approach includes:
 
 The method demonstrates how algorithmic thinking can efficiently combine spatial neuroimaging data with provable correctness and reproducibility.
 
-### Files
-
-```
-divide_conquer/
-│
-├── merge_brain_maps.py         # Implementation of the pointwise maximum D&C algorithm
-├── merge_brain_maps_test.py    # Synthetic tests and validation plots
-├── datasets/                   # EEG/fMRI sample datasets (or Kaggle data placeholder)
-├── README_DIVIDE.md            # Project-specific description
-└── results/                    # Output merged activation maps
-```
-
 ---
 
 ## 🧩 Project 2: Maximum Probability Disease Progression Path via Log-Transformed Shortest Path
@@ -58,42 +46,7 @@ The project covers:
 * Correctness and runtime proofs
 * Domain interpretation and real-world clinical validation
 
-### Files
-
-```
-greedy_shortest_path/
-│
-├── disease_progression.py      # Main implementation using log-transformed Dijkstra
-├── test_disease_graph.py       # Validation with real-world or simulated data
-├── datasets/                   # Clinical or synthetic probabilistic graph data
-├── README_GREEDY.md            # Project-specific notes
-└── results/                    # Visualizations and output paths
-```
-
 ---
-
-## ⚙️ Setup and Usage
-
-### 1. Clone the Repository
-
-```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/AOA_Project1.git
-cd AOA_Project1
-```
-
-### 2. Create Environment
-
-```bash
-conda create -n aoa_project python=3.10
-conda activate aoa_project
-pip install -r requirements.txt
-```
-
-### 3. Run Divide-and-Conquer (EEG Map Merge)
-
-```bash
-python divide_conquer/merge_brain_maps.py --input datasets/eeg_maps/ --output results/merged_map.png
-```
 
 ### 4. Run Disease Progression Shortest Path
 
@@ -106,11 +59,12 @@ python greedy_shortest_path/disease_progression.py --graph datasets/disease_grap
 ## 📊 Datasets
 
 * **EEG/fMRI Dataset:** Adapted from Kaggle EEG Brainwave Datasets
-  [https://www.kaggle.com/datasets](https://www.kaggle.com/datasets)
+  [https://www.kaggle.com/datasets/amananandrai/complete-eeg-dataset?resource=download](https://www.kaggle.com/datasets/amananandrai/complete-eeg-dataset?resource=download)
+  
   (See LaTeX Appendix B for detailed usage and instructions.)
 
 * **Disease Graph Dataset:** Generated or anonymized clinical progression graphs used for probabilistic pathfinding.
-
+[https://www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset?select=cardio_train.csv]([https://www.kaggle.com/datasets](https://www.kaggle.com/datasets/sulianova/cardiovascular-disease-dataset?select=cardio_train.csv))
 ---
 
 ## 📁 Repository Structure
