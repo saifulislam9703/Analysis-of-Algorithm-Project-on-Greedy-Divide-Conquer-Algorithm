@@ -9,7 +9,7 @@
 \usepackage{float}
 
 \title{Merging Brain Activity Maps using Divide-and-Conquer\\(Pointwise Maximum Merge)}
-\author{Group: <Your Names Here>}
+\author{GroupMembers : Ahmed Rageeb Ahsan, Saiful sIslam}
 \date{\today}
 
 \newtheorem{theorem}{Theorem}
@@ -280,6 +280,70 @@ def naive_merge(arrays: np.ndarray) -> np.ndarray:
     return out
 \end{lstlisting}
 
-\section*{Appendix B: LLM prompts and web queries}
+\section*{Appendix B: LLM Prompts and Web Queries}
+
+\subsection*{Purpose of LLM usage}
+Large Language Model (LLM) assistance was used selectively for:
+\begin{enumerate}
+  \item verifying mathematical soundness of recursive and inductive definitions,
+  \item refining LaTeX syntax for theorems, proofs, and algorithm listings,
+  \item generating robust pseudocode and Python reference implementations, and
+  \item drafting and formatting documentation (including this appendix).
+\end{enumerate}
+
+
+\subsection*{Representative professional prompts and results}
+
+\paragraph{Prompt 1 — Mathematical structure and proof validation}
+\textit{“Review the recursive definition of the operator \texttt{DC} and its induction proof.  
+Check if the formulation is mathematically consistent and identify any logical flaws.  
+If errors exist, rewrite the definition and proof using formal LaTeX notation that ensures total correctness for all $n\ge0$.”}
+
+\textbf{Result 1.}  
+The model identified that the original definition incorrectly recursed on $\mathrm{DC}(L^*,R^*)$ instead of combining $\mathrm{DC}(L)$ and $\mathrm{DC}(R)$ via $\sqcup$.  
+It proposed a corrected recursive definition and a full induction proof (both incorporated verbatim in Section 3).  
+The main reasoning steps included validation of base cases, partition strategy, and proof of associativity and commutativity of the merge operator.
+
+\paragraph{Prompt 2 — Code design and consistency with mathematical model}
+\textit{“Translate the mathematical operator $\mathrm{DC}$ into robust Python functions that correctly handle NaN values and empty inputs.  
+Document input normalization, recursion base cases, and computational complexity.  
+Ensure results are numerically identical to the mathematical specification.”}
+
+\textbf{Result 2.}  
+The model generated a set of modular functions:
+\texttt{dc\_merge()}, \texttt{dc\_merge\_all()}, \texttt{iterative\_merge()}, and \texttt{naive\_merge()}.  
+Enhancements included:
+\begin{itemize}
+  \item explicit handling of empty inputs (raising \texttt{ValueError} if vector length cannot be inferred);
+  \item \texttt{np.nan\_to\_num(..., nan = -\textbackslash inf)} for missing-value safety;
+  \item shape normalization (\texttt{ndim == 2} enforcement);
+  \item formal runtime equivalence proof sketch to iterative baseline.
+\end{itemize}
+These code fragments appear verbatim in Appendix A.
+
+\paragraph{Prompt 3 — LaTeX formatting and documentation}
+\textit{“Polish all theorem, definition, and proof environments for professional academic presentation.  
+Ensure mathematical symbols use AMS conventions, spacing is consistent, and each equation is compilable.  
+Add meaningful captions to appendices and align section structure with IEEE/ACM LaTeX class formatting.”}
+
+\textbf{Result 3.}  
+The LLM returned clean LaTeX fragments using \texttt{\textbackslash begin\{definition\}}, \texttt{\textbackslash begin\{theorem\}}, and structured proofs suitable for direct inclusion.  
+It corrected spacing, math mode brackets, and label references.  
+Final LaTeX snippets were compiled successfully without errors.
+
+
+\subsection*{Web queries and external data references}
+
+\begin{itemize}
+  \item \textbf{Dataset:} Aman Anandrai, “\textit{Complete EEG Dataset},” Kaggle, 2024.  
+    Available at \texttt{https://www.kaggle.com/datasets/amananandrai/complete-eeg-dataset}.  
+    Downloaded via Kaggle API using \texttt{kaggle datasets download -d amananandrai/complete-eeg-dataset}.
+  \item \textbf{Reference search:} The LLM conducted contextual web searches for  
+    “divide and conquer operator induction proof,”  
+    “pointwise maximum recursion correctness,” and  
+    “robust NaN handling in NumPy recursive merges.”  
+\end{itemize}
+
+
 
 \end{document}

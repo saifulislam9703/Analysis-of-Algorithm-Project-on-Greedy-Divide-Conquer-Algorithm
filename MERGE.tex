@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage{pdfpages}
+\usepackage{hyperref}
+\begin{document}
+
+% --- Include the two reports in order ---
+\includepdf[pages=-]{GREEDY.pdf}
+\includepdf[pages=-]{D&C.pdf}
+
+% --- Final page with code reference ---
+\newpage
+\thispagestyle{empty}
+\begin{center}
+    \vspace*{4cm}
+    \Huge{\textbf{Code Repository}}\\[1cm]
+    \Large{All Python source code, experiment scripts, and runtime plots used in both reports are available at:}\\[0.5cm]
+    \Large{\href{https://drive.google.com/drive/folders/1z4sT0gWIyU-71sdMK3_u90aOcTGhf54Q?usp=sharing}{\texttt{AOA Project1}}}\\[1cm]
+    \Large{(View-only access provided for evaluation purposes.)}\\[2cm]
+    \Large{\textit{End of Project 1 Submission}}
+\end{center}
+
+\end{document}
