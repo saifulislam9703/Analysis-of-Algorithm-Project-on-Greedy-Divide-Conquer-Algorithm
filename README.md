@@ -3,7 +3,7 @@
 **Authors:** Ahmed Rageeb Ahsan, Saiful Islam
 **Date:** November 6, 2025
 **Course:** Analysis of Algorithms — Project 1
-**Instructor:** [Your Instructor’s Name]
+**Instructor:** Alin Dobra
 
 ---
 
