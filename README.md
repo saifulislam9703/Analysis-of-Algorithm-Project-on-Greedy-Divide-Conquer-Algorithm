@@ -60,7 +60,7 @@ python greedy_shortest_path/disease_progression.py --graph datasets/disease_grap
 
 * **EEG/fMRI Dataset:** Adapted from Kaggle EEG Brainwave Datasets
   [https://www.kaggle.com/datasets/amananandrai/complete-eeg-dataset?resource=download](https://www.kaggle.com/datasets/amananandrai/complete-eeg-dataset?resource=download)
-  
+  [https://www.kaggle.com/datasets/amananandrai/complete-eeg-dataset?resource=download]([https://www.kaggle.com/datasets](https://www.kaggle.com/datasets/amananandrai/complete-eeg-dataset?resource=download))
   (See LaTeX Appendix B for detailed usage and instructions.)
 
 * **Disease Graph Dataset:** Generated or anonymized clinical progression graphs used for probabilistic pathfinding.
